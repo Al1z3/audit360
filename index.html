@@ -69,6 +69,20 @@
   .legal .box{background:#fff; border-radius:12px; padding:18px 20px; box-shadow:0 3px 12px rgba(15,42,74,.06); border-left:5px solid var(--red)}
   .legal .box .big{font-size:1.5rem; font-weight:800; color:var(--red)}
 
+  /* DETAILS PAR VOLET */
+  .details{display:grid; gap:14px}
+  .dcard{background:#fff; border-radius:12px; padding:18px 22px; box-shadow:0 3px 12px rgba(15,42,74,.06); border-left:5px solid var(--blue)}
+  .dcard.d1{border-color:var(--blue)} .dcard.d2{border-color:var(--teal)} .dcard.d3{border-color:var(--orange)}
+  .dcard.d4{border-color:var(--blue)} .dcard.d5{border-color:var(--red)} .dcard.d6{border-color:var(--teal)}
+  .dcard h3{font-size:1.08rem; color:var(--navy); margin-bottom:10px}
+  .dcard ul{margin-left:18px; font-size:.95rem}
+  .dcard ul li{margin-bottom:5px}
+  .dcard ul li strong{color:var(--navy)}
+  table.mini{width:100%; border-collapse:collapse; margin-top:6px; font-size:.9rem}
+  table.mini th{background:var(--navy); color:#fff; padding:7px 9px; text-align:left; font-weight:600}
+  table.mini td{padding:7px 9px; border-bottom:1px solid var(--lgrey)}
+  table.mini tr:nth-child(even) td{background:var(--lgrey)}
+  .sev{display:inline-block; font-weight:800; color:#fff; border-radius:5px; padding:1px 8px; font-size:.82rem}
   footer{margin-top:40px; background:var(--navy); color:#9FB4CB; padding:26px 0; font-size:.85rem; text-align:center}
   footer strong{color:#fff}
   @media(max-width:720px){
@@ -98,12 +112,18 @@
 </section>
 
 <section class="wrap">
-  <h2><span class="bar"></span>Les chiffres à retenir</h2>
+  <h2><span class="bar"></span>Contexte de l'entreprise</h2>
+  <div class="sub">Éditeur de logiciels SaaS B2B (ERP, RH, comptabilité) pour PME européennes. Nouvelle DSI, Marie Lefèvre, en poste depuis 6 mois après un incident ransomware évité de justesse.</div>
   <div class="figs">
+    <div class="fig"><div class="n">350</div><div class="l">employés</div></div>
     <div class="fig"><div class="n">14 000</div><div class="l">clients européens</div></div>
     <div class="fig"><div class="n">45 M€</div><div class="l">de CA · +15 %/an</div></div>
-    <div class="fig"><div class="n">99,9 %</div><div class="l">dispo cible = 43 min/mois max</div></div>
     <div class="fig"><div class="n">400</div><div class="l">postes (300 fixes + 100 mobiles)</div></div>
+  </div>
+  <div class="pitch" style="margin-top:16px; border-color:var(--blue); font-size:1rem">
+    <strong>La mission de la DSI, en 3 axes :</strong> ① sécuriser le SI après l'incident ransomware ·
+    ② migrer vers une architecture cloud hybride résiliente · ③ atteindre la conformité réglementaire
+    (NIS2, RGPD, ISO 27001).
   </div>
 </section>
 
@@ -127,6 +147,99 @@
 </section>
 
 <section class="wrap">
+  <h2><span class="bar"></span>L'essentiel de chaque volet</h2>
+  <div class="sub">Le contenu concret à connaître, volet par volet.</div>
+  <div class="details">
+
+    <div class="dcard d1">
+      <h3>I · Gouvernance IT</h3>
+      <ul>
+        <li><strong>4 objectifs stratégiques :</strong> OS1 Sécuriser le SI + ISO 27001 · OS2 Cloud hybride résilient (99,9 %) · OS3 Industrialiser l'IT (ITIL v4) · OS4 Continuité &amp; transmission du savoir.</li>
+        <li><strong>5 référentiels :</strong> ISO 27001 (sécurité/SMSI) · RGPD (données) · NIS2 (cybersécurité, obligation) · ITIL v4 (services IT) · COBIT 2019 (gouvernance).</li>
+        <li><strong>Gouvernance à 3 niveaux :</strong> Comité de pilotage IT (trimestriel) › Comité technique DSI (mensuel) › Réunions hebdo (vers un comité CAB).</li>
+        <li><strong>KPI clés :</strong> disponibilité ≥ 99,9 % · ≤ 2 incidents P1/mois · MTTR P1 ≤ 1 h · MDM/EDR &amp; MFA à 100 %.</li>
+      </ul>
+    </div>
+
+    <div class="dcard d2">
+      <h3>II · Audit de l'infrastructure</h3>
+      <ul>
+        <li><strong>Parc :</strong> 50 serveurs physiques + 150 VMs · 400 postes (300 fixes + 100 mobiles).</li>
+        <li><strong>Hébergement :</strong> DC Lyon (production, <em>point unique de défaillance / SPOF</em>) · DC Francfort (secours) · AWS Paris (développement v2).</li>
+        <li><strong>Réseau :</strong> 3 sites (Châtel-Guyon, Berlin, Barcelone) reliés par VPN, sans redondance ni segmentation.</li>
+        <li><strong>2 écarts critiques :</strong> aucun plan de reprise (PRA) testé · matériel personnel (BYOD) non maîtrisé — à l'origine de l'incident ransomware.</li>
+      </ul>
+    </div>
+
+    <div class="dcard d3">
+      <h3>III · SLA — niveaux de sévérité</h3>
+      <table class="mini">
+        <tr><th>Niveau</th><th>Situation</th><th>Prise en charge</th><th>Résolution cible</th><th>Max</th></tr>
+        <tr><td><span class="sev b-red">P1</span></td><td>Service totalement indisponible / perte de données</td><td>15 min</td><td>2 h</td><td>4 h</td></tr>
+        <tr><td><span class="sev b-orange">P2</span></td><td>Module partiel ou fonction critique sans contournement</td><td>30 min – 1 h</td><td>4 h</td><td>8 h</td></tr>
+        <tr><td><span class="sev b-blue">P3</span></td><td>Fonction secondaire dégradée, contournement possible</td><td>2 h</td><td>24 h</td><td>48 h</td></tr>
+        <tr><td><span class="sev" style="background:#5D6D7E">P4</span></td><td>Anomalie non bloquante</td><td>4 h</td><td>3 j</td><td>5 j</td></tr>
+        <tr><td><span class="sev" style="background:#5D6D7E">P5</span></td><td>Requête (accès, compte, matériel, information)</td><td>8 h</td><td>5 j</td><td>10 j</td></tr>
+      </table>
+      <ul style="margin-top:10px">
+        <li><strong>Disponibilité cible :</strong> 99,9 % = au maximum 43 min d'indisponibilité par mois.</li>
+        <li><strong>Crédits en cas de manquement :</strong> 0 % (≥ 99,5 %) · 5 % · 10 % · 25 % · 50 % (&lt; 95 %, plafond).</li>
+      </ul>
+    </div>
+
+    <div class="dcard d4">
+      <h3>IV · Processus &amp; procédures (ITIL v4)</h3>
+      <ul>
+        <li><strong>4 processus :</strong> gestion des incidents · des changements · des problèmes · des sauvegardes/restaurations.</li>
+        <li><strong>3 types de changement :</strong> Standard (préapprouvé) · Normal (validé en CAB) · Urgent (appliqué puis revu).</li>
+        <li><strong>Escalade en 3 niveaux :</strong> N1 Support (T. Dubois) → N2 Infrastructure (K. Benali) → N3 Sécurité/DSI (S. Martin, M. Lefèvre).</li>
+        <li><strong>Sauvegardes :</strong> règle 3-2-1 (3 copies, 2 supports, 1 isolée), chiffrement obligatoire, tests partiels trimestriels et complets annuels.</li>
+      </ul>
+    </div>
+
+    <div class="dcard d5">
+      <h3>V · Risques &amp; continuité <span style="color:var(--red); font-weight:700">— volet central</span></h3>
+      <ul>
+        <li><strong>Méthode EBIOS RM (ANSSI), 5 ateliers.</strong> Seuil de tolérance dépassé dès Gravité 3 × Vraisemblance 2.</li>
+        <li><strong>3 sources de risque :</strong> SR1 cybercriminel/ransomware · SR2 prestataire ou startup IA compromis · SR3 employé BYOD / Shadow IT.</li>
+      </ul>
+      <table class="mini">
+        <tr><th>Risque (tous majeurs)</th><th>G×V</th></tr>
+        <tr><td><span class="sev b-red">R1</span> Ransomware via BYOD → chiffrement du DC Lyon → arrêt du SaaS</td><td>4×3</td></tr>
+        <tr><td><span class="sev b-orange">R2</span> Identifiants prestataire (VPN sans MFA) → vol de la base clients → double extorsion</td><td>4×2</td></tr>
+        <tr><td><span class="sev b-blue">R3</span> Startup IA → backdoor dans le code v2 → compromission en production</td><td>3×2</td></tr>
+        <tr><td><span class="sev b-orange">R4</span> Employé BYOD → accès à une base clients non cloisonnée → fuite</td><td>4×2</td></tr>
+      </table>
+      <table class="mini" style="margin-top:10px">
+        <tr><th colspan="2">6 mesures de traitement</th></tr>
+        <tr><td><span class="sev b-red">M1</span> MDM + EDR sur les 400 postes</td><td><span class="sev b-red">M2</span> Plans PCA/PRA documentés et testés</td></tr>
+        <tr><td><span class="sev b-red">M3</span> MFA généralisé (VPN, prestataires, cloud)</td><td><span class="sev b-red">M4</span> Audit sécurité de la startup IA</td></tr>
+        <tr><td><span class="sev b-red">M5</span> Chiffrement base clients + DLP</td><td><span class="sev b-teal">M6</span> Fin du Shadow IT (Next Gen → DSI)</td></tr>
+      </table>
+      <ul style="margin-top:10px">
+        <li><strong>PCA (continuer pendant la crise) — cellule de crise à 6 rôles :</strong> Décision (DSI) · Analyse/forensic (RSSI) · Anticipation technique (Infra) · Communication (Support) · Traçage/main courante (Assistante de direction) · DPO (RSSI).</li>
+        <li><strong>PRA (redémarrer après) :</strong> bascule <strong>Lyon → Francfort</strong>, objectifs RTO/RPO par service (base clients : RTO &lt; 1 h, RPO &lt; 15 min), 4 fiches réflexes (ransomware, sinistre Lyon, violation RGPD, backdoor).</li>
+      </ul>
+      <div class="legal" style="margin-top:12px">
+        <div class="box"><div class="big">24 h</div>Notification à l'ANSSI / CERT-FR — incident significatif <strong>(NIS2)</strong></div>
+        <div class="box"><div class="big">72 h</div>Notification à la CNIL — violation de données <strong>(RGPD)</strong>, sanction ≤ 4 % du CA ≈ 1,8 M€</div>
+      </div>
+    </div>
+
+    <div class="dcard d6">
+      <h3>VI · Numérique responsable</h3>
+      <ul>
+        <li><strong>Inventaire &amp; cycle de vie :</strong> recensement complet dans GLPI, prolongation de la durée de vie, BYOD encadré (MDM, chiffrement, EDR, effacement à distance).</li>
+        <li><strong>Sobriété énergétique :</strong> consolidation des VMs sous-utilisées, arrêt des environnements de test hors plages, suppression des ressources orphelines.</li>
+        <li><strong>FinOps cloud (AWS) :</strong> tags obligatoires (application, environnement, propriétaire, criticité), budgets &amp; alertes, arrêt automatique, revue mensuelle.</li>
+        <li><strong>Loi AGEC :</strong> critères environnementaux aux appels d'offres, réemploi interne, filière DEEE certifiée, effacement sécurisé et tracé.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section class="wrap">
   <div class="thread">
     <h2><span class="bar"></span>Le fil rouge — comment tout se tient</h2>
     <div class="flow">
@@ -138,46 +251,6 @@
       <span class="arrow">→</span>
       <span class="step">La feuille de route les planifie</span>
     </div>
-  </div>
-</section>
-
-<section class="wrap">
-  <div class="grid2">
-    <div class="card">
-      <h3>⚠️ 4 risques majeurs identifiés</h3>
-      <ul class="clean">
-        <li><span class="badge b-red">R1</span> Ransomware via BYOD → chiffrement du DC Lyon → arrêt du SaaS <em>(le pire : G4×V3)</em></li>
-        <li><span class="badge b-orange">R2</span> Identifiants prestataire (VPN sans MFA) → vol de la base clients → double extorsion</li>
-        <li><span class="badge b-blue">R3</span> Startup IA rachetée → backdoor dans le code v2 → compromission en production</li>
-        <li><span class="badge b-orange">R4</span> Employé sur matériel perso → accès à une base clients non cloisonnée → fuite</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>🛡️ 6 mesures prioritaires (M1–M6)</h3>
-      <ul class="clean">
-        <li><span class="badge b-red">M1</span> MDM + EDR sur les 400 postes</li>
-        <li><span class="badge b-red">M2</span> Plans PCA/PRA documentés et testés</li>
-        <li><span class="badge b-red">M3</span> MFA généralisé (VPN, prestataires, cloud)</li>
-        <li><span class="badge b-red">M4</span> Audit sécurité de la startup IA</li>
-        <li><span class="badge b-red">M5</span> Chiffrement de la base clients + DLP</li>
-        <li><span class="badge b-teal">M6</span> Fin du Shadow IT (Next Gen rattachée à la DSI)</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="wrap">
-  <h2><span class="bar"></span>Continuité : survivre à la crise</h2>
-  <div class="sub">Deux plans complémentaires + deux délais légaux à ne jamais confondre.</div>
-  <div class="grid2" style="margin-bottom:16px">
-    <div class="card"><h3>PCA — Plan de Continuité</h3>
-      <p style="font-size:.95rem">Comment <strong>continuer à tourner pendant</strong> la crise : cellule de crise (6 rôles), qui décide, qui prévient qui, chronologie type.</p></div>
-    <div class="card"><h3>PRA — Plan de Reprise</h3>
-      <p style="font-size:.95rem">Comment <strong>redémarrer après</strong> : bascule <strong>Lyon → Francfort</strong>, objectifs RTO/RPO, 4 fiches réflexes par scénario.</p></div>
-  </div>
-  <div class="legal">
-    <div class="box"><div class="big">24 h</div>Notification à l'ANSSI / CERT-FR en cas d'incident significatif <strong>(NIS2)</strong></div>
-    <div class="box"><div class="big">72 h</div>Notification à la CNIL en cas de violation de données <strong>(RGPD)</strong> — sanction ≤ 4 % du CA ≈ 1,8 M€</div>
   </div>
 </section>
 
