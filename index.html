@@ -83,6 +83,12 @@
   table.mini td{padding:7px 9px; border-bottom:1px solid var(--lgrey)}
   table.mini tr:nth-child(even) td{background:var(--lgrey)}
   .sev{display:inline-block; font-weight:800; color:#fff; border-radius:5px; padding:1px 8px; font-size:.82rem}
+  /* GLOSSAIRE */
+  .glossary{display:grid; grid-template-columns:1fr 1fr; gap:7px 26px; background:#fff; border-radius:12px;
+            padding:22px 26px; box-shadow:0 3px 12px rgba(15,42,74,.06)}
+  .gitem{font-size:.92rem; padding:4px 0; border-bottom:1px solid var(--lgrey); line-height:1.4}
+  .gitem .gt{font-weight:800; color:var(--navy)}
+  @media(max-width:720px){ .glossary{grid-template-columns:1fr} }
   footer{margin-top:40px; background:var(--navy); color:#9FB4CB; padding:26px 0; font-size:.85rem; text-align:center}
   footer strong{color:#fff}
   @media(max-width:720px){
@@ -252,6 +258,60 @@
       <span class="arrow">→</span>
       <span class="step">La feuille de route les planifie</span>
     </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2><span class="bar"></span>Glossaire des acronymes</h2>
+  <div class="sub">Tous les sigles employés dans ce résumé, expliqués.</div>
+  <div class="glossary">
+    <div class="gitem"><span class="gt">AGEC</span> — loi Anti-Gaspillage pour une Économie Circulaire</div>
+    <div class="gitem"><span class="gt">ANSSI</span> — Agence Nationale de la Sécurité des Systèmes d'Information</div>
+    <div class="gitem"><span class="gt">AWS</span> — Amazon Web Services (fournisseur cloud)</div>
+    <div class="gitem"><span class="gt">B2B</span> — Business to Business (vente entre entreprises)</div>
+    <div class="gitem"><span class="gt">BYOD</span> — Bring Your Own Device (usage du matériel personnel)</div>
+    <div class="gitem"><span class="gt">CA</span> — Chiffre d'Affaires</div>
+    <div class="gitem"><span class="gt">CAB</span> — Change Advisory Board (comité de validation des changements)</div>
+    <div class="gitem"><span class="gt">CERT-FR</span> — Computer Emergency Response Team France (réponse nationale aux incidents)</div>
+    <div class="gitem"><span class="gt">CNIL</span> — Commission Nationale de l'Informatique et des Libertés</div>
+    <div class="gitem"><span class="gt">COBIT</span> — Control Objectives for Information and Related Technologies (gouvernance IT)</div>
+    <div class="gitem"><span class="gt">DC</span> — Datacenter (centre de données)</div>
+    <div class="gitem"><span class="gt">DEEE</span> — Déchets d'Équipements Électriques et Électroniques</div>
+    <div class="gitem"><span class="gt">DLP</span> — Data Loss Prevention (prévention des fuites de données)</div>
+    <div class="gitem"><span class="gt">DMIA</span> — Durée Maximale d'Interruption Admissible (équivalent du RTO)</div>
+    <div class="gitem"><span class="gt">DPO</span> — Data Protection Officer (délégué à la protection des données)</div>
+    <div class="gitem"><span class="gt">DSI</span> — Direction / Directeur des Systèmes d'Information</div>
+    <div class="gitem"><span class="gt">EBIOS RM</span> — méthode d'analyse de risque de l'ANSSI (Risk Manager)</div>
+    <div class="gitem"><span class="gt">EDR</span> — Endpoint Detection and Response (détection/réponse sur les postes)</div>
+    <div class="gitem"><span class="gt">ERP</span> — Enterprise Resource Planning (progiciel de gestion intégré)</div>
+    <div class="gitem"><span class="gt">FinOps</span> — Financial Operations (maîtrise financière du cloud)</div>
+    <div class="gitem"><span class="gt">GLPI</span> — Gestionnaire Libre de Parc Informatique (parc + tickets)</div>
+    <div class="gitem"><span class="gt">G × V</span> — Gravité × Vraisemblance (cotation d'un risque)</div>
+    <div class="gitem"><span class="gt">ISO 27001</span> — norme internationale de management de la sécurité de l'information (SMSI)</div>
+    <div class="gitem"><span class="gt">ITIL</span> — Information Technology Infrastructure Library (bonnes pratiques services IT)</div>
+    <div class="gitem"><span class="gt">KPI</span> — Key Performance Indicator (indicateur clé de performance)</div>
+    <div class="gitem"><span class="gt">M1–M6</span> — les 6 mesures de traitement du risque</div>
+    <div class="gitem"><span class="gt">MDM</span> — Mobile Device Management (gestion des terminaux mobiles)</div>
+    <div class="gitem"><span class="gt">MFA</span> — Multi-Factor Authentication (authentification multifacteur)</div>
+    <div class="gitem"><span class="gt">MTTR</span> — Mean Time To Repair (temps moyen de résolution)</div>
+    <div class="gitem"><span class="gt">NIS2</span> — Network and Information Security 2 (directive européenne de cybersécurité)</div>
+    <div class="gitem"><span class="gt">OV</span> — Objectif Visé par une source de risque (EBIOS)</div>
+    <div class="gitem"><span class="gt">P1–P5</span> — niveaux de priorité / sévérité d'un incident</div>
+    <div class="gitem"><span class="gt">PCA</span> — Plan de Continuité d'Activité (tenir pendant la crise)</div>
+    <div class="gitem"><span class="gt">PRA</span> — Plan de Reprise d'Activité (redémarrer après)</div>
+    <div class="gitem"><span class="gt">R1–R4</span> — les 4 scénarios de risque retenus</div>
+    <div class="gitem"><span class="gt">RGPD</span> — Règlement Général sur la Protection des Données</div>
+    <div class="gitem"><span class="gt">RH</span> — Ressources Humaines</div>
+    <div class="gitem"><span class="gt">RPO</span> — Recovery Point Objective : données maximales perdables (= PDMA)</div>
+    <div class="gitem"><span class="gt">RSSI</span> — Responsable de la Sécurité des Systèmes d'Information</div>
+    <div class="gitem"><span class="gt">RTO</span> — Recovery Time Objective : durée d'interruption maximale (= DMIA)</div>
+    <div class="gitem"><span class="gt">SaaS</span> — Software as a Service (logiciel en ligne par abonnement)</div>
+    <div class="gitem"><span class="gt">SI</span> — Système d'Information</div>
+    <div class="gitem"><span class="gt">SLA</span> — Service Level Agreement (engagement de niveau de service)</div>
+    <div class="gitem"><span class="gt">SPOF</span> — Single Point Of Failure (point unique de défaillance)</div>
+    <div class="gitem"><span class="gt">SR</span> — Source de Risque (EBIOS)</div>
+    <div class="gitem"><span class="gt">VM</span> — Machine Virtuelle (Virtual Machine)</div>
+    <div class="gitem"><span class="gt">VPN</span> — Virtual Private Network (réseau privé virtuel)</div>
   </div>
 </section>
 
